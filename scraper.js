@@ -7,7 +7,7 @@ function getValuesAsElements(rule, elements){
 }
 function getValue(element, attribute){
     if(attribute.match(/^(innerText|value|innerHTML)$/)){
-        return eval("element." + attribute)
+        return element[attribute]
     }
     return element.getAttribute(attribute)
 }
@@ -80,20 +80,19 @@ function getValuesAsProperties(propertyRules, elements){
                     })})({properties: temp, functions:functions})
     }
     else{
-        var totalLength = 0
         var sortedNodes = []
         for(var y = 0; y < selectors.length; y++){
-            totalLength += offsets[selectors[y]].len
-            for(var i = 0; i < elements[selectors[y]].length; i++){
-                sortedNodes.push({selector: y, element: elements[selectors[y]][i], index: getIndex(elements[selectors[y]][i], elements["*"])})
+            for(var i = offsets[selectors[y]].start; i < offsets[selectors[y]].end; i++){
+                sortedNodes.push({selector: y, element: {dom: elements[selectors[y]][i], index: getIndex(elements[selectors[y]][i], elements["*"])}})
             }
         }
+        sortedNodes.sort(sortNodes)
         var selecAll = selectors.map(function(s){
             return s.split(">")
         })
         for(var s = 0; s < sortedNodes.length; s++){
             var tempElements = []
-            var parent = sortedNodes[s].element.parentNode
+            var parent = sortedNodes[s].element.dom.parentNode
             var p = 1
             var found = true
             var selecs = selecAll.map(function(c){
@@ -137,9 +136,23 @@ function getValuesAsProperties(propertyRules, elements){
                 var selectorOrder = tempElements.map(function(e){
                     return e.selector
                 })
-                //TODO: Extract the elements in the right order, then extract the values
-                throw "Extracting objects is not yet implemented for group of elements with different lengths."
-                break
+                var tempValue = {}
+                var lastSelectorIndex = -1
+                for(var u = 0; u < sortedNodes.length; u++){
+                    var currentSelectorIndex = selectorOrder.indexOf(sortedNodes[u].selector)
+                    if(currentSelectorIndex <= lastSelectorIndex){
+                        values.push(tempValue)
+                        tempValue = {}
+                        lastSelectorIndex = -1
+                    }
+                    else{
+                        lastSelectorIndex = currentSelectorIndex
+                    }
+                    propertyRules[selectors[sortedNodes[u].selector]].filter(function(e){
+                        tempValue[e.property.substr(1)] = eval("(function(x){"
+                        + e.rule.function + "})(getValue(sortedNodes[u].element.dom, e.rule.attribute))")
+                    })
+                }
             }
         }
     }

@@ -153,6 +153,7 @@ function getValuesAsProperties(propertyRules, elements){
                         + e.rule.function + "})(getValue(sortedNodes[u].element.dom, e.rule.attribute))")
                     })
                 }
+                break
             }
         }
     }

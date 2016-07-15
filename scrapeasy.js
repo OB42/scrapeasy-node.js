@@ -8,8 +8,8 @@ var stringifiedScraper = {}
 Object.getOwnPropertyNames(scraper).filter(function(f){
     stringifiedScraper[f] = toSource(scraper[f])
 })
-function scrapeasy (url, pattern, callback){
-    var results = {}, elements = {}
+module.exports = function(url, pattern, callback){
+    var results = {}
     var options = {
         'pool.maxSockets' : maxSockets,
          url : url,
@@ -18,7 +18,7 @@ function scrapeasy (url, pattern, callback){
         }
     }
     request(options, function(err, res, data){
-         if(err){
+        if(err){
             callback(err)
         }
         else{
@@ -72,12 +72,9 @@ function scrapeasy (url, pattern, callback){
                         callback(false, result)
                     }
                 })
-
             } catch(err) {
                 callback(err, results)
             }
         }
     })
 }
-
-module.exports = scrapeasy

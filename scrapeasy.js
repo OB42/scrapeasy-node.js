@@ -43,7 +43,7 @@ module.exports = function(url, pattern, callback){
                         pattern[selectors[i]].filter(function(rule){
                             var property = rule.as.split("[n]")
                             if (!property[1].length){
-                                results[property[0]] = getValuesAsElements(rule, elements[selectors])
+                                results[property[0]] = getValuesAsElements(rule, elements[selectors[i]])
                             }
                             else{
                                 if(typeof asProperties[property[0]] === "undefined"){

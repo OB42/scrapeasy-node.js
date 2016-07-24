@@ -1,7 +1,9 @@
 function getValuesAsElements(rule, elements){
     var values = []
-    for(var i = rule.offset.from; i < (rule.offset.to || elements.length); i++){
-        values.push(getValue(elements[i], rule.attribute))
+    if(elements.length){
+        for(var i = rule.offset.from; i < (rule.offset.to || elements.length); i++){
+            values.push(getValue(elements[i], rule.attribute))
+        }
     }
     return eval("values.map(function(x){" + rule.function + "})")
 }

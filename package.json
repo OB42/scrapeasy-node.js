@@ -8,6 +8,9 @@
     "tosource": "1.0.0",
     "parsonic": "1.1.0"
   },
+  "scripts": {
+      "test": "node test/test.js"
+  },
   "keywords": [
     "scraping",
     "scraper",

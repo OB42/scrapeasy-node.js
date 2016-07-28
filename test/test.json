@@ -1,0 +1,390 @@
+{
+        "Return values as array elements": {
+                "pattern": {
+                        "HTML>BODY>DIV>DIV.spacer>DIV>DIV.thing>DIV.entry>P.title>A.title": [
+                                {
+                                        "scrapingMethod": "default",
+                                        "attribute": "innerText",
+                                        "as": "post[n]",
+                                        "function": "return x;",
+                                        "offset": {
+                                                "from": 0,
+                                                "to": 0
+                                        }
+                                }
+                        ]
+                },
+                "expected": {
+                        "post": [
+                                "Searching for Montenegro's Illegal Blast Fishermen",
+                                "Found out my son is laundering money",
+                                "Avatar 2, 3, 4 and 5 filmmaker James Cameron finally admits he 'overwrote'",
+                                "The Who - Behind Blue Eyes [Classic Rock] (Batman's Theme)",
+                                "ELI5: Why does it always seem that parents only ever walk in during movies/TV whilst there are sex talks or sex scenes?",
+                                "How did your parents discipline you when you misbehaved?",
+                                "How do you get a clown off a swing?",
+                                "If M. Night Shyamalan really wanted to surprise moviegoers, the plot-twist in his next film should be not including a twist.",
+                                "FUN AT THE PARK",
+                                "A kid hears moaning noises downstairs...",
+                                "The New York City man whose cellphone video captured the fatal police chokehold of unarmed black man Eric Garner is suing the city for $10 million over a drug arrest that he says was police retaliation.",
+                                "Every wonder what a game looks like before and after the artist takes over?",
+                                "TIL Authorities uncovered Wachovia Bank who laundered $378.4bn for a Mexican Drug Cartel and was fined just $50m (2%of its profits) and no one went to Jail.",
+                                "A Chain-linked fence that is not interlocked",
+                                "Otters see a butterfly",
+                                "I took this photo of this morning's Atlas V launch from just 2.5 miles away",
+                                "First Images from Matt Damon's Monster Movie \"The Great Wall\"; the most expensive Chinese movie of all time.",
+                                "Herbert (pervert) from FamilyGuy in real life. [Skip to 1:11]",
+                                "She's a retriever, not a genius.",
+                                "Men in Iran are wearing hijabs in solidarity with their wives who are forced to cover their hair",
+                                "Excuse me",
+                                "One does not simply Walk into Mordor, Nepal, [OC][1200x800]",
+                                "Sewer worker AMA",
+                                "Giant anaconda in the Amazon River (xpost from /r/pics)",
+                                "Police officer playing with children, Harlem 1978",
+                                "Hiking",
+                                "United States Election results since 1789 [OC]",
+                                "What if instead of playing dodgeball or climbing ropes, gym class focused on proper body mechanics like good posture, running properly, squating correctly or lifting a box from the ground?",
+                                "A magic sandbox I made for my 3 y.o. son's birthday. Detailed BOM and source code included.",
+                                "What's your favourite paradox?",
+                                "Decentralized app, that feeds the hungry by delivering unwanted food from local caterers and restaurants, delivered its 1,000 meal in Austin, Texas",
+                                "PsBattle: This picture of Hillary Clinton and Barack Obama",
+                                "Cheese, mushrooms, sausage, goats cheese, cranberries and garlic sauce in Poland",
+                                "Rio 2016: Olympic athletes told to ‘keep your mouth closed’ when in contaminated water",
+                                "The difference between before/after getting hired"
+                        ]
+                }
+        },
+        "Return an array of objects:": {
+                "pattern": {
+                        "HTML>BODY>DIV>DIV.spacer>DIV>DIV.thing>DIV.entry>P.title>A.title": [
+                                {
+                                        "scrapingMethod": "default",
+                                        "attribute": "innerText",
+                                        "as": "post[n].title",
+                                        "function": "return x;",
+                                        "offset": {
+                                                "from": 0,
+                                                "to": 0
+                                        }
+                                }
+                        ],
+                        "HTML>BODY>DIV>DIV.spacer>DIV>DIV.thing>DIV.entry>P.tagline>A.subreddit": [
+                                {
+                                        "scrapingMethod": "default",
+                                        "attribute": "innerText",
+                                        "as": "post[n].subreddit",
+                                        "function": "return x;",
+                                        "offset": {
+                                                "from": 0,
+                                                "to": 0
+                                        }
+                                }
+                        ]
+                },
+                "expected": {
+                        "post": [
+                                {
+                                        "subreddit": "/r/videos",
+                                        "title": "Searching for Montenegro's Illegal Blast Fishermen"
+                                },
+                                {
+                                        "subreddit": "/r/Jokes",
+                                        "title": "Found out my son is laundering money"
+                                },
+                                {
+                                        "subreddit": "/r/nottheonion",
+                                        "title": "Avatar 2, 3, 4 and 5 filmmaker James Cameron finally admits he 'overwrote'"
+                                },
+                                {
+                                        "subreddit": "/r/Music",
+                                        "title": "The Who - Behind Blue Eyes [Classic Rock] (Batman's Theme)"
+                                },
+                                {
+                                        "subreddit": "/r/explainlikeimfive",
+                                        "title": "ELI5: Why does it always seem that parents only ever walk in during movies/TV whilst there are sex talks or sex scenes?"
+                                },
+                                {
+                                        "subreddit": "/r/AskReddit",
+                                        "title": "How did your parents discipline you when you misbehaved?"
+                                },
+                                {
+                                        "subreddit": "/r/Jokes",
+                                        "title": "How do you get a clown off a swing?"
+                                },
+                                {
+                                        "subreddit": "/r/Showerthoughts",
+                                        "title": "If M. Night Shyamalan really wanted to surprise moviegoers, the plot-twist in his next film should be not including a twist."
+                                },
+                                {
+                                        "subreddit": "/r/Jokes",
+                                        "title": "FUN AT THE PARK"
+                                },
+                                {
+                                        "subreddit": "/r/Jokes",
+                                        "title": "A kid hears moaning noises downstairs..."
+                                },
+                                {
+                                        "subreddit": "/r/news",
+                                        "title": "The New York City man whose cellphone video captured the fatal police chokehold of unarmed black man Eric Garner is suing the city for $10 million over a drug arrest that he says was police retaliation."
+                                },
+                                {
+                                        "subreddit": "/r/gaming",
+                                        "title": "Every wonder what a game looks like before and after the artist takes over?"
+                                },
+                                {
+                                        "subreddit": "/r/todayilearned",
+                                        "title": "TIL Authorities uncovered Wachovia Bank who laundered $378.4bn for a Mexican Drug Cartel and was fined just $50m (2%of its profits) and no one went to Jail."
+                                },
+                                {
+                                        "subreddit": "/r/mildlyinteresting",
+                                        "title": "A Chain-linked fence that is not interlocked"
+                                },
+                                {
+                                        "subreddit": "/r/gifs",
+                                        "title": "Otters see a butterfly"
+                                },
+                                {
+                                        "subreddit": "/r/space",
+                                        "title": "I took this photo of this morning's Atlas V launch from just 2.5 miles away"
+                                },
+                                {
+                                        "subreddit": "/r/movies",
+                                        "title": "First Images from Matt Damon's Monster Movie \"The Great Wall\"; the most expensive Chinese movie of all time."
+                                },
+                                {
+                                        "subreddit": "/r/videos",
+                                        "title": "Herbert (pervert) from FamilyGuy in real life. [Skip to 1:11]"
+                                },
+                                {
+                                        "subreddit": "/r/funny",
+                                        "title": "She's a retriever, not a genius."
+                                },
+                                {
+                                        "subreddit": "/r/worldnews",
+                                        "title": "Men in Iran are wearing hijabs in solidarity with their wives who are forced to cover their hair"
+                                },
+                                {
+                                        "subreddit": "/r/aww",
+                                        "title": "Excuse me"
+                                },
+                                {
+                                        "subreddit": "/r/EarthPorn",
+                                        "title": "One does not simply Walk into Mordor, Nepal, [OC][1200x800]"
+                                },
+                                {
+                                        "subreddit": "/r/IAmA",
+                                        "title": "Sewer worker AMA"
+                                },
+                                {
+                                        "subreddit": "/r/creepy",
+                                        "title": "Giant anaconda in the Amazon River (xpost from /r/pics)"
+                                },
+                                {
+                                        "subreddit": "/r/OldSchoolCool",
+                                        "title": "Police officer playing with children, Harlem 1978"
+                                },
+                                {
+                                        "subreddit": "/r/pics",
+                                        "title": "Hiking"
+                                },
+                                {
+                                        "subreddit": "/r/dataisbeautiful",
+                                        "title": "United States Election results since 1789 [OC]"
+                                },
+                                {
+                                        "subreddit": "/r/Showerthoughts",
+                                        "title": "What if instead of playing dodgeball or climbing ropes, gym class focused on proper body mechanics like good posture, running properly, squating correctly or lifting a box from the ground?"
+                                },
+                                {
+                                        "subreddit": "/r/DIY",
+                                        "title": "A magic sandbox I made for my 3 y.o. son's birthday. Detailed BOM and source code included."
+                                },
+                                {
+                                        "subreddit": "/r/AskReddit",
+                                        "title": "What's your favourite paradox?"
+                                },
+                                {
+                                        "subreddit": "/r/UpliftingNews",
+                                        "title": "Decentralized app, that feeds the hungry by delivering unwanted food from local caterers and restaurants, delivered its 1,000 meal in Austin, Texas"
+                                },
+                                {
+                                        "subreddit": "/r/photoshopbattles",
+                                        "title": "PsBattle: This picture of Hillary Clinton and Barack Obama"
+                                },
+                                {
+                                        "subreddit": "/r/food",
+                                        "title": "Cheese, mushrooms, sausage, goats cheese, cranberries and garlic sauce in Poland"
+                                },
+                                {
+                                        "subreddit": "/r/nottheonion",
+                                        "title": "Rio 2016: Olympic athletes told to ‘keep your mouth closed’ when in contaminated water"
+                                },
+                                {
+                                        "subreddit": "/r/Jokes",
+                                        "title": "The difference between before/after getting hired"
+                                }
+                        ]
+                }
+        },
+        "Return an array of objects, with optional properties:": {
+                "pattern": {
+                        "HTML>BODY>DIV>DIV.spacer>DIV>DIV.thing>DIV.entry>P.title>A.title": [
+                                {
+                                        "scrapingMethod": "default",
+                                        "attribute": "innerText",
+                                        "as": "post[n].title",
+                                        "function": "return x;",
+                                        "offset": {
+                                                "from": 0,
+                                                "to": 0
+                                        }
+                                }
+                        ],
+                        "HTML>BODY>DIV>DIV.spacer>DIV>DIV.thing>DIV.entry>P.tagline>A.subreddit": [
+                                {
+                                        "scrapingMethod": "default",
+                                        "attribute": "innerText",
+                                        "as": "post[n].subreddit",
+                                        "function": "return x;",
+                                        "offset": {
+                                                "from": 5,
+                                                "to": 0
+                                        }
+                                }
+                        ]
+                },
+                "expected": {
+                        "post": [
+                                {
+                                        "title": "Searching for Montenegro's Illegal Blast Fishermen"
+                                },
+                                {
+                                        "title": "Avatar 2, 3, 4 and 5 filmmaker James Cameron finally admits he 'overwrote'"
+                                },
+                                {
+                                        "title": "ELI5: Why does it always seem that parents only ever walk in during movies/TV whilst there are sex talks or sex scenes?"
+                                },
+                                {
+                                        "subreddit": "/r/AskReddit",
+                                        "title": "How did your parents discipline you when you misbehaved?"
+                                },
+                                {
+                                        "subreddit": "/r/Jokes",
+                                        "title": "How do you get a clown off a swing?"
+                                },
+                                {
+                                        "subreddit": "/r/Showerthoughts",
+                                        "title": "If M. Night Shyamalan really wanted to surprise moviegoers, the plot-twist in his next film should be not including a twist."
+                                },
+                                {
+                                        "subreddit": "/r/Jokes",
+                                        "title": "FUN AT THE PARK"
+                                },
+                                {
+                                        "subreddit": "/r/Jokes",
+                                        "title": "A kid hears moaning noises downstairs..."
+                                },
+                                {
+                                        "subreddit": "/r/news",
+                                        "title": "The New York City man whose cellphone video captured the fatal police chokehold of unarmed black man Eric Garner is suing the city for $10 million over a drug arrest that he says was police retaliation."
+                                },
+                                {
+                                        "subreddit": "/r/gaming",
+                                        "title": "Every wonder what a game looks like before and after the artist takes over?"
+                                },
+                                {
+                                        "subreddit": "/r/todayilearned",
+                                        "title": "TIL Authorities uncovered Wachovia Bank who laundered $378.4bn for a Mexican Drug Cartel and was fined just $50m (2%of its profits) and no one went to Jail."
+                                },
+                                {
+                                        "subreddit": "/r/mildlyinteresting",
+                                        "title": "A Chain-linked fence that is not interlocked"
+                                },
+                                {
+                                        "subreddit": "/r/gifs",
+                                        "title": "Otters see a butterfly"
+                                },
+                                {
+                                        "subreddit": "/r/space",
+                                        "title": "I took this photo of this morning's Atlas V launch from just 2.5 miles away"
+                                },
+                                {
+                                        "subreddit": "/r/movies",
+                                        "title": "First Images from Matt Damon's Monster Movie \"The Great Wall\"; the most expensive Chinese movie of all time."
+                                },
+                                {
+                                        "subreddit": "/r/videos",
+                                        "title": "Herbert (pervert) from FamilyGuy in real life. [Skip to 1:11]"
+                                },
+                                {
+                                        "subreddit": "/r/funny",
+                                        "title": "She's a retriever, not a genius."
+                                },
+                                {
+                                        "subreddit": "/r/worldnews",
+                                        "title": "Men in Iran are wearing hijabs in solidarity with their wives who are forced to cover their hair"
+                                },
+                                {
+                                        "subreddit": "/r/aww",
+                                        "title": "Excuse me"
+                                },
+                                {
+                                        "subreddit": "/r/EarthPorn",
+                                        "title": "One does not simply Walk into Mordor, Nepal, [OC][1200x800]"
+                                },
+                                {
+                                        "subreddit": "/r/IAmA",
+                                        "title": "Sewer worker AMA"
+                                },
+                                {
+                                        "subreddit": "/r/creepy",
+                                        "title": "Giant anaconda in the Amazon River (xpost from /r/pics)"
+                                },
+                                {
+                                        "subreddit": "/r/OldSchoolCool",
+                                        "title": "Police officer playing with children, Harlem 1978"
+                                },
+                                {
+                                        "subreddit": "/r/pics",
+                                        "title": "Hiking"
+                                },
+                                {
+                                        "subreddit": "/r/dataisbeautiful",
+                                        "title": "United States Election results since 1789 [OC]"
+                                },
+                                {
+                                        "subreddit": "/r/Showerthoughts",
+                                        "title": "What if instead of playing dodgeball or climbing ropes, gym class focused on proper body mechanics like good posture, running properly, squating correctly or lifting a box from the ground?"
+                                },
+                                {
+                                        "subreddit": "/r/DIY",
+                                        "title": "A magic sandbox I made for my 3 y.o. son's birthday. Detailed BOM and source code included."
+                                },
+                                {
+                                        "subreddit": "/r/AskReddit",
+                                        "title": "What's your favourite paradox?"
+                                },
+                                {
+                                        "subreddit": "/r/UpliftingNews",
+                                        "title": "Decentralized app, that feeds the hungry by delivering unwanted food from local caterers and restaurants, delivered its 1,000 meal in Austin, Texas"
+                                },
+                                {
+                                        "subreddit": "/r/photoshopbattles",
+                                        "title": "PsBattle: This picture of Hillary Clinton and Barack Obama"
+                                },
+                                {
+                                        "subreddit": "/r/food",
+                                        "title": "Cheese, mushrooms, sausage, goats cheese, cranberries and garlic sauce in Poland"
+                                },
+                                {
+                                        "subreddit": "/r/nottheonion",
+                                        "title": "Rio 2016: Olympic athletes told to ‘keep your mouth closed’ when in contaminated water"
+                                },
+                                {
+                                        "subreddit": "/r/Jokes",
+                                        "title": "The difference between before/after getting hired"
+                                }
+                        ]
+                }
+        }
+}

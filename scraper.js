@@ -116,7 +116,7 @@ function getValuesAsProperties(propertyRules, elements){
         if(currentSelectorIndex <= lastSelectorIndex){
             values.push(tempValue)
             tempValue = {}
-            lastSelectorIndex = -1
+            lastSelectorIndex = 0
         }
         else{
             lastSelectorIndex = currentSelectorIndex
